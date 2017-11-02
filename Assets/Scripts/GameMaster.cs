@@ -1,22 +1,17 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
 
 	public static GameMaster gm;
     public static int gameScore;
+    public static UI_Update ui;
 
-	//	player related
     [SerializeField]
 	private Transform playerPrefab;
 	private Transform playerSpawnPoint;
-    //[SerializeField]
-	//private int playerRespawnDelay = 3;
-    public static UI_Update ui;
     [SerializeField]
     private GameObject gameOverUI;
    
-
     private void Awake()
     {
         if (gm == null)
@@ -38,13 +33,12 @@ public class GameMaster : MonoBehaviour {
         {
             Debug.LogError("GAME MASTER: No UI_Overlay referenced, or no UI_Update script found !");
         }
-
         gameScore = 0;
-
     }
 
     // Use this for initialization
-    void Start() {
+    private void Start()
+    {
 		//	finds player spawn point
 		playerSpawnPoint = GameObject.Find ("PlayerSpawnPoint").transform;
 		if (playerSpawnPoint == null) {
@@ -56,7 +50,6 @@ public class GameMaster : MonoBehaviour {
 	//	kill player
 	public static void KillPlayer(Player player) {
         Destroy(player.gameObject);
-		//gm.StartCoroutine (gm.RespawnPlayer ());
 	}
 
     public void EndGame()

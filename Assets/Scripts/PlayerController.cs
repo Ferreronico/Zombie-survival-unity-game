@@ -5,11 +5,8 @@ public class PlayerController : PhysicsObject
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
-
     private Animator animator;
     private bool facingRight;                           //  player facing direction
-
-   
     public LayerMask whatToHit;
     Transform firePoint;
 	[SerializeField]
@@ -18,9 +15,8 @@ public class PlayerController : PhysicsObject
 
     public Transform bulletTrailPrefab;
 
-
     // Use this for initialization
-    void Awake()
+    private void Awake()
     {
         firePoint = transform.Find("FirePoint");
         if (firePoint == null)
@@ -67,13 +63,10 @@ public class PlayerController : PhysicsObject
 		if (timeToFire > 0) {
 			timeToFire -= Time.deltaTime;
 		}
-
-
     }
 
-    void Shoot()
+    private void Shoot()
     {
-		
 		Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
 		Vector2 firingDirection;
 		firingDirection = facingRight ? Vector2.right : Vector2.left;

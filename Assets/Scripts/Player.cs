@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
 
@@ -42,7 +40,8 @@ public class Player : MonoBehaviour {
     {
         GameMaster.ui.SetHealth(stats.curHealth, stats.maxHealth);
     }
-    void Update () {
+    private void Update ()
+    {
 		if (gameObject.transform.position.y <= -10) {
 			DamagePlayer (9999);
 		}
@@ -50,7 +49,8 @@ public class Player : MonoBehaviour {
 	}
 
 
-	public void DamagePlayer (int _damage) {
+	public void DamagePlayer (int _damage)
+    {
 		stats.curHealth -= _damage;
 		AudioManager.instance.PlaySound ("PlayerHurt");
 		//Debug.Log ("Damaging player for: " + _damage + " damage, health left: " + stats.curHealth);

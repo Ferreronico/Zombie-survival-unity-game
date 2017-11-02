@@ -44,7 +44,8 @@ public class AudioManager : MonoBehaviour {
 			instance = this;
 		}
 	}
-	void Start() 
+
+	private void Start() 
 	{
 		for (int i = 0; i < sounds.Length; i++) 
 		{

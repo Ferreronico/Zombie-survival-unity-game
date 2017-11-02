@@ -14,7 +14,8 @@ public class MoveBullet : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    private void Update ()
+    {
 
 		//	if bullet hasn`t hit anything, fly indefinetily for 1 sec
 		if (hitX == -9999) {

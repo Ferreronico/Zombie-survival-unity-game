@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PhysicsObject : MonoBehaviour {
-
-
+    
 	[HideInInspector] public float minGroundNormalY = .65f;					//	minimal ground normal to be considered ground
 	[HideInInspector] public float gravityModifier = 1f;						//	gravity modifier
 	protected Rigidbody2D rb2d;								//	object rigidbodu
@@ -20,16 +18,15 @@ public class PhysicsObject : MonoBehaviour {
 	protected const float shellRadius = 0.01f;			//	shell radius for colision deceting
 	protected const float minMoveDistance = 0.001f;		//	minimal move distance for object to start chechking colision
 
-	void OnEnable()
+	private void OnEnable()
 	{
 		rb2d = GetComponent<Rigidbody2D> ();				//	reference to objects rigidbody
 
 	}
 
 	// Use this for initialization
-	void Start ()
+	private void Start ()
     {
-
 		//	contact filter layer setup 
 		contactFilter.useTriggers = false;					
 		contactFilter.SetLayerMask (Physics2D.GetLayerCollisionMask (gameObject.layer));
@@ -37,7 +34,7 @@ public class PhysicsObject : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	private void Update ()
     {
 		targetVelocity = Vector2.zero;
 		ComputeVelocity ();
@@ -48,7 +45,7 @@ public class PhysicsObject : MonoBehaviour {
 		
 	}
 
-    void FixedUpdate(){
+    private void FixedUpdate(){
 		
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
 		velocity.x = targetVelocity.x;
@@ -69,7 +66,7 @@ public class PhysicsObject : MonoBehaviour {
 	}
 
 	//	moving object rigidbody
-	void Movement(Vector2 move, bool yMovement){
+	private void Movement(Vector2 move, bool yMovement){
 		float distance = move.magnitude;
 
 		//	if object is moving check colisions

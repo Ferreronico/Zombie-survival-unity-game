@@ -7,14 +7,12 @@ public class Enemy : MonoBehaviour
     public class EnemyStats
     {
         public int maxHealth = 25;
-
         private float _maxSpeed;
         public float maxSpeed
         {
             get { return _maxSpeed; }
             set { _maxSpeed = Mathf.Clamp(value, 2f, 4f); }
         }
-
         private int _curHealth;
         public int curHealth
         {
@@ -28,7 +26,7 @@ public class Enemy : MonoBehaviour
             get { return _killScore; }
             set { _killScore = value; }
         }
-
+  
         public void Init()
         {
             curHealth = maxHealth;
@@ -40,15 +38,14 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public EnemyController enemyController;
 
-    //  init
-    void Start()
+    private void Start()
     {
         enemyController = gameObject.GetComponent<EnemyController>();
         stats = new EnemyStats();
         stats.Init();
     }
 
-    void Update()
+    private void Update()
     {
         //  if somehow enemy accidentally fall of level
         if (gameObject.transform.position.y <= -10)
@@ -57,10 +54,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    //  aply damage to enemy
+    //  apply damage to enemy
     public void DamageEnemy(int damage)
     {
-		AudioManager.instance.PlaySound ("EnemyHit");
+		AudioManager.instance.PlaySound ("EnemyHit");                   //  play hit sound
         stats.curHealth -= damage;                                      //  decrese health
         if (stats.curHealth <= 0)                                       //  if enemy should be dead
         {                                    
@@ -69,7 +66,7 @@ public class Enemy : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("DeadEnemies");    //  move to other layermask, for bullet colision to ignore dead bodies
             gameObject.tag = "Untagged";                                //  remove "Enemy" Tag for wave spawner to know when to start next wave
             GameMaster.KillEnemy(this);                                 //  destroy game object
-            GameMaster.ui.SetScoreNumber(GameMaster.gameScore);
+            GameMaster.ui.SetScoreNumber(GameMaster.gameScore);         //  update gamescore
         }
     }
 }

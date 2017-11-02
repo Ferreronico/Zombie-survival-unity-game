@@ -12,7 +12,6 @@ public class UI_Update : MonoBehaviour {
     [SerializeField]
     private RectTransform waveCleartext;
 
-
     private void Start()
     {
         //  check if referencees are completed in inspector

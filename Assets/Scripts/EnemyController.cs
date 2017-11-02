@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 using System;
-
 
 public class EnemyController : PhysicsObject
 {
@@ -13,7 +9,8 @@ public class EnemyController : PhysicsObject
     private bool attacking = false;                      //	atacking state booL
     private float horizontal;                           //	horizontal movememtn variable
     private bool facingRight;                           //  zombie facing direction
-    [HideInInspector] public bool isAlive = true;
+    [HideInInspector]
+    public bool isAlive = true;
 
     //	target related
     private Transform target;                           //	reference to target to chase
@@ -34,11 +31,9 @@ public class EnemyController : PhysicsObject
 
     private Enemy enemy;
 
-
     void Awake()
-    {
+    {   //  getting references
         enemy = GetComponent<Enemy>();
-        //	getting references and seting variables
         animator = GetComponent<Animator>();
         zombie = GetComponent<Transform>();
         timeLeftforAttack = attackTime;

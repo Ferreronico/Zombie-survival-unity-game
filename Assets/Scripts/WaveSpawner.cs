@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour {
@@ -18,14 +17,13 @@ public class WaveSpawner : MonoBehaviour {
     private float enemyCheckDelay;
     private float enemyCheckCountDown;
 
-
     private int waveCounter;        //  wave counter
     private int enemyCount;         //  enemyCount
     private float waveCountDown;     //  time count down before new wave spawn
 
     private SpawnerState state = SpawnerState.COUNTING;
 
-    void Start()
+    private void Start()
     {
         waveCounter = 0;
         enemyCount = 0;
@@ -35,7 +33,7 @@ public class WaveSpawner : MonoBehaviour {
    
     }
 
-    void Update()
+    private void Update()
     {   //  if waiting for player to kill all enemies
         if (state == SpawnerState.WAITING)
         {   //  check if there is alive enemies..
