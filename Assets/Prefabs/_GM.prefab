@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4686519378107362}
-  - component: {fileID: 114648507671910870}
+  - component: {fileID: 114661669777417176}
   - component: {fileID: 114062572703289814}
   - component: {fileID: 114730365868715380}
   - component: {fileID: 82409906832016834}
@@ -289,7 +289,7 @@ MonoBehaviour:
   waveSpawnDelay: 5
   enemySpawnDelay: 0.5
   enemyCheckDelay: 1
---- !u!114 &114648507671910870
+--- !u!114 &114661669777417176
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

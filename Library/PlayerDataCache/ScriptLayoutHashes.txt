@@ -104,6 +104,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+01a88a2db0b79bf85a0f5dbf954c35e4 Assembly-CSharp.dll:.AudioManager
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
@@ -111,6 +112,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 4ca5a4c8eb3ee514f1275c30c3210f9c Assembly-CSharp.dll:.PhysicsObject
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameOverUI
 503b77bc2699cafaa71d68b941d66acc Assembly-CSharp.dll:.UI_Update
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Player
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -139,10 +141,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 2fe77b4af33e0b7d7dd7bfc530f08d65 Assembly-CSharp.dll:.Enemy
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenuUI
 75ca06417c9792495fea520a4d61f330 Assembly-CSharp.dll:.GameMaster
 fac25b955c7c713445c5bad7ba030aa8 Assembly-CSharp.dll:.WaveSpawner
-c0da2f927cb7a532b601c4c1f0159dde Assembly-CSharp.dll:.CameraFollow
+65bb722f3820b0aaeb450ced55f1e70f Assembly-CSharp.dll:.CameraFollow
 6e95811e1d0a984640b46536cf61d4dc Assembly-CSharp.dll:.EnemyController
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameOverUI
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenuUI
-01a88a2db0b79bf85a0f5dbf954c35e4 Assembly-CSharp.dll:.AudioManager

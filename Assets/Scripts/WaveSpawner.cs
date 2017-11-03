@@ -28,16 +28,14 @@ public class WaveSpawner : MonoBehaviour {
         waveCounter = 0;
         enemyCount = 0;
         waveCountDown = waveSpawnDelay;
-        enemyCheckCountDown = enemyCheckDelay;
-
-   
+        enemyCheckCountDown = enemyCheckDelay; 
     }
 
     private void Update()
     {   //  if waiting for player to kill all enemies
         if (state == SpawnerState.WAITING)
         {   //  check if there is alive enemies..
-            if (!isEnemyAlive())
+            if (!IsEnemyAlive())
             {   //  ..and if is change state to next wave countdown
                 state = SpawnerState.COUNTING;
                 waveCountDown = waveSpawnDelay;
@@ -57,7 +55,7 @@ public class WaveSpawner : MonoBehaviour {
 					GameMaster.ui.SetWaveClearText("WAVE CLEAR");
 				}
                 waveCounter++;                                                  //	inc wave number
-                enemyCount += waveCounter * Random.Range(2, waveCounter);       //	increase enemy count in wave
+                enemyCount += waveCounter;                                      //	increase enemy count in wave
                 GameMaster.ui.SetWaveNumber(waveCounter);                       //  update wave number in ui
                 StartCoroutine(SpawnWave(enemyCount));                          //  start spawning
             }
@@ -73,7 +71,7 @@ public class WaveSpawner : MonoBehaviour {
     }
 
     //  check if there is alive enemies 
-    private bool isEnemyAlive()
+    private bool IsEnemyAlive()
     {   //  delay for checking
         enemyCheckCountDown -= Time.deltaTime;
         if (enemyCheckCountDown <= 0f)

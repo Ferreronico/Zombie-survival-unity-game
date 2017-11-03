@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
   
         public void Init()
         {
+            //maxSpeed = Random.Range(2f, 4f);
             curHealth = maxHealth;
             killScore = 1;
         }
@@ -38,7 +39,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public EnemyController enemyController;
 
-    private void Start()
+    private void Awake()
     {
         enemyController = gameObject.GetComponent<EnemyController>();
         stats = new EnemyStats();
